@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Laboratorio 4 HANGMAN
  
 ## Presentado por: 
@@ -71,3 +72,6 @@ git commit -m "implementación del modelo"
 git push <URL Repositorio>	
 ```
 ## Parte II
+=======
+# cvds-lab4
+>>>>>>> 6ef355c04f9b0f7f67835deb344ebbbc1b91dcff
