@@ -22,7 +22,10 @@ public class GUI {
             "Christopher Santos..00",
             "Jazmin Guerrero..00"};
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
     public static final String SPLASH_KEY = "splashscreen";
     public static final String FUNCTION_KEY = "functionscreen";
     public static final String HIGH_SCORE_KEY = "highscorescreen";
@@ -33,7 +36,10 @@ public class GUI {
     private Language language;
     private HangmanDictionary dictionary;
     private HangmanPanel hangmanPanel;
+<<<<<<< HEAD
     private GameScore gameS;
+=======
+>>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
 
     private MainFrameController mainFrameController;
 
@@ -53,6 +59,7 @@ public class GUI {
 
     @Inject
     // Use Guice constructor
+<<<<<<< HEAD
     public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel, GameScore gameS){
         this.language = language;
         this.dictionary= dictionary;
@@ -66,12 +73,30 @@ public class GUI {
     private void setup(){
         mainFrameController = new MainFrameController(
                 new MainFrameModel(PROJECT_NAME,600,400,null,EXIT_ON_CLOSE),
+=======
+    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel) {
+        this.language = language;
+        this.dictionary = dictionary;
+        this.hangmanPanel = hangmanPanel;
+    }
+
+    // method: setup
+    // purpose: Create the various panels (game screens) for our game
+    // and attach them to the main frame.
+    private void setup() {
+        mainFrameController = new MainFrameController(
+                new MainFrameModel(PROJECT_NAME, 600, 400, null, EXIT_ON_CLOSE),
+>>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
                 new MainFrame()
         );
 
         splashController = new SplashController(
                 new SplashPanel(),
+<<<<<<< HEAD
                 new SplashModel(PROJECT_NAME,"REDS", Color.BLACK,3000),
+=======
+                new SplashModel(PROJECT_NAME, "REDS", Color.BLACK, 3000),
+>>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
                 mainFrameController
         );
 
@@ -81,7 +106,11 @@ public class GUI {
                 mainFrameController
         );
 
+<<<<<<< HEAD
         GameModel gameModel = new GameModel(dictionary, gameS);
+=======
+        GameModel gameModel = new GameModel(dictionary);
+>>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
         gameController = new GameController(
                 new GamePanel(gameModel.getCharacterSet(), hangmanPanel, language),
                 gameModel,
@@ -105,21 +134,37 @@ public class GUI {
                 mainFrameController
         );
 
+<<<<<<< HEAD
         mainFrameController.addPanel(splashController.getPanel(),SPLASH_KEY);
         mainFrameController.addPanel(functionController.getPanel(),FUNCTION_KEY);
         mainFrameController.addPanel(gameController.getPanel(),GAME_KEY);
         mainFrameController.addPanel(creditsController.getPanel(),CREDITS_KEY);
         mainFrameController.addPanel(gameoverController.getPanel(),GAME_OVER_KEY);
         mainFrameController.addPanel(highScoreController.getPanel(),HIGH_SCORE_KEY);
+=======
+        mainFrameController.addPanel(splashController.getPanel(), SPLASH_KEY);
+        mainFrameController.addPanel(functionController.getPanel(), FUNCTION_KEY);
+        mainFrameController.addPanel(gameController.getPanel(), GAME_KEY);
+        mainFrameController.addPanel(creditsController.getPanel(), CREDITS_KEY);
+        mainFrameController.addPanel(gameoverController.getPanel(), GAME_OVER_KEY);
+        mainFrameController.addPanel(highScoreController.getPanel(), HIGH_SCORE_KEY);
+>>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
 
         functionController.setGameControllerReference(gameController);
         gameoverController.setGameControllerReference(gameController);
     }
 
+<<<<<<< HEAD
     //method: setupAndStart
     //purpose: call setup method, switch to first application screen (splash)
     //then set the whole thing visible
     private void setupAndStart(){
+=======
+    // method: setupAndStart
+    // purpose: call setup method, switch to first application screen (splash)
+    // then set the whole thing visible
+    private void setupAndStart() {
+>>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
         javax.swing.SwingUtilities.invokeLater(() -> {
             setup();
             mainFrameController.changeVisibleCard(SPLASH_KEY);
