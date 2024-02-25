@@ -94,10 +94,6 @@ Incorpore el Contenedor Liviano Guice dentro del proyecto:
     <artifactId>guice</artifactId>
     <version>4.0</version>
  </dependency>
-<<<<<<< HEAD
-=======
- 
->>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
  ´´´
 - Modifique la inyección de dependencias utilizando guice en lugar del método fábrica.
 
@@ -126,15 +122,8 @@ Realizando inyección de dependencias en el proyecto en: src/main/java/hangman/s
 Añadiendo comportamiento en: src/main/java/hangman/model/GameModel.java
 
 ´´´
-<<<<<<< HEAD
 @Inject
 private GameScore gameS;
-=======
-
-@Inject
-private GameScore gameS;
-
->>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
 ´´´
 
 - Mediante la configuración de la Inyección de Dependencias se pueda cambiar el comportamiento del mismo, por ejemplo:
@@ -147,10 +136,6 @@ Utilizar el diccionario francés.
 Usando idioma francés y diccionario francés con el esquema BonusScore.
 
 ´´´
-<<<<<<< HEAD
-=======
-
->>>>>>> 4153f44e1f984dcae826a545f5f385057e944e81
  @Override
  protected void configure() {
     bind(Language.class).to(French.class);
